@@ -1,0 +1,31 @@
+[ec2-user@ip-10-1-11-11 ~]$ mysql -u admin -h udacity.cxgsi93whl7s.us-east-1.rds.amazonaws.com -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MySQL connection id is 38
+Server version: 8.0.20 Source distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MySQL [(none)]> use udacity;
+Database changed
+MySQL [udacity]> CREATE TABLE test (message VARCHAR(200));
+Query OK, 0 rows affected (0.07 sec)
+
+MySQL [udacity]> insert into test(message) values('hola');
+Query OK, 1 row affected (0.02 sec)
+
+MySQL [udacity]> insert into test(message) values('chao');
+Query OK, 1 row affected (0.01 sec)
+
+MySQL [udacity]> select * from test;
++---------+
+| message |
++---------+
+| hola    |
+| chao    |
++---------+
+2 rows in set (0.01 sec)
+
+MySQL [udacity]> 
